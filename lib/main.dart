@@ -1,6 +1,6 @@
 import 'package:eklbm_bima_ciputra_satrio/model/menu_item.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/caraKerja/cara_kerja_page.dart';
-import 'package:eklbm_bima_ciputra_satrio/screens/kuis/kuis_page.dart';
+import 'package:eklbm_bima_ciputra_satrio/screens/kuis/main_kuis_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/tentangAplikasi/tentang_aplikasi_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/troubleshoot/troubleshoot_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/menu_page.dart';
@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case MenuItems.caraKerja:
         return CaraKerjaPage();
       case MenuItems.kuis:
-        return kuisPage();
+        return MainKuisPage();
       default:
         return TentangAplikasiPage();
     }
