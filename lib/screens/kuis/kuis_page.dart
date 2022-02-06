@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:eklbm_bima_ciputra_satrio/screens/kuis/data/pertanyaan_kuis.dart';
+import 'package:eklbm_bima_ciputra_satrio/screens/kuis/data/kuis_data.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/kuis/hasil_kuis.dart';
 import 'package:eklbm_bima_ciputra_satrio/shared/color.dart';
 // import 'package:quizz_app/widgets/quizz_widget.dart';

@@ -7,7 +7,7 @@ class halamanUtamaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.purple,
       title: Text(
         'Elektronik Modul Kelistrikan Bodi Mobil'
       ),

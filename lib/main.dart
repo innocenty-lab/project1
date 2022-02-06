@@ -40,22 +40,24 @@ class _MyHomePageState extends State<MyHomePage> {
   MenuItem currentItem = MenuItems.halamanUtama;
 
   @override
-  Widget build(BuildContext context) => ZoomDrawer(
-    style: DrawerStyle.Style1,
-    borderRadius: 40,
-    angle: -10,
-    slideWidth: MediaQuery.of(context).size.width*0.8,
-    showShadow: true,
-    backgroundColor: Colors.orangeAccent,
-    mainScreen: getScreen(),
-    menuScreen: Builder(
-      builder: (context) => MenuPage(
-        currentItem: currentItem,
-        onSelectedItem: (item) {
-          setState(() => currentItem = item);
-
-          ZoomDrawer.of(context)!.close();
-        },
+  Widget build(BuildContext context) => SafeArea(
+    child: ZoomDrawer(
+      style: DrawerStyle.Style1,
+      borderRadius: 40,
+      angle: -10,
+      slideWidth: MediaQuery.of(context).size.width*0.8,
+      showShadow: true,
+      backgroundColor: Colors.orangeAccent,
+      mainScreen: getScreen(),
+      menuScreen: Builder(
+        builder: (context) => MenuPage(
+          currentItem: currentItem,
+          onSelectedItem: (item) {
+            setState(() => currentItem = item);
+  
+            ZoomDrawer.of(context)!.close();
+          },
+        ),
       ),
     ),
   );

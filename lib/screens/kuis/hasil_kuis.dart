@@ -53,7 +53,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     height: 20.0,
                   ),
                   Text(
-                    "${widget.score * 10}",
+                    "${widget.score * 10}/250",
                     style: TextStyle(
                       color: Colors.orange,
                       fontSize: 85.0,
@@ -122,7 +122,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     color: AppColor.secondaryColor,
                     padding: EdgeInsets.all(18.0),
                     child: Text(
-                      "Reapeat the quizz",
+                      "Kembali",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
