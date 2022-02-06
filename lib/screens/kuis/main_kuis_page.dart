@@ -11,7 +11,7 @@ class MainKuisPage extends StatelessWidget {
     appBar: AppBar(
       backgroundColor: Colors.blue,
       title: Text(
-        'Kuis Page'
+        'Main Kuis Page'
       ),
       leading: MenuWidget(),
     ),
