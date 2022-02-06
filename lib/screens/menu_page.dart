@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:eklbm_bima_ciputra_satrio/model/menu_item.dart';
 
 class MenuItems {
-  static const halamanUtama = MenuItem('halamanUtama', Icons.home_outlined);
-  static const menuRPS = MenuItem('menuRPS', Icons.school_outlined);
+  static const halamanUtama = MenuItem('Halaman Utama', Icons.home_outlined);
+  static const menuRPS = MenuItem('Menu RPS', Icons.school_outlined);
   static const daftarMateri = MenuItem('Daftar Materi', Icons.auto_stories_outlined);
   static const troubleshoot = MenuItem('Troubleshoot', Icons.build_outlined);
-  static const caraKerja = MenuItem('Cara Kerja', Icons.handyman_outlined);
-  static const kuis = MenuItem('Kuis', Icons.quiz_outlined);
-  static const tentangAplikasi = MenuItem('Tentang Aplikasi', Icons.person_outline);
+  static const caraKerja = MenuItem('Cara Kerja', Icons.videocam_outlined);
+  static const kuis = MenuItem('Kuis', Icons.assignment);
+  static const tentangAplikasi = MenuItem('Tentang Aplikasi', Icons.smartphone_outlined);
 
   static const all = <MenuItem>[
     halamanUtama,
@@ -21,7 +21,7 @@ class MenuItems {
   ];
 }
 
-class MenuPage extends StatelessWidget {
+class MenuPage extends StatefulWidget {
   final MenuItem currentItem;
   final ValueChanged<MenuItem> onSelectedItem;
 
@@ -34,41 +34,84 @@ class MenuPage extends StatelessWidget {
   ) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => Theme(
-    data: ThemeData.dark(),
-    child: Scaffold(
-      backgroundColor: Colors.indigo,
-      appBar: AppBar(
-        backgroundColor: Colors.transparent,
-        title: Text(
-          'E-KLBM'
+  State<MenuPage> createState() => _MenuPageState();
+}
+
+class _MenuPageState extends State<MenuPage> {
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Theme(
+      data: ThemeData.dark(),
+      child: SafeArea(
+        child: Scaffold(
+          backgroundColor: Colors.indigo,
+          appBar: AppBar(
+            backgroundColor: Colors.transparent,
+            title: Text(
+              'E-KLBM'
+            ),
+            // leading:,
+          ),
+          body: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjk"),
+                // Text("kjjkjnjnjnjnijn"),
+
+                // Spacer(),
+                SizedBox(
+                  height: size.height * 0.05,
+                ),
+                ...MenuItems.all.map(buildMenuItem).toList(),
+                // Spacer(flex: 2),
+                SizedBox(
+                  height: size.height * 0.05,
+                ),
+              ],
+            ),
+          ),
         ),
-        // leading:,
       ),
-      body: SafeArea(
-        child: SafeArea(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Spacer(),
-              ...MenuItems.all.map(buildMenuItem).toList(),
-              Spacer(flex: 2),
-            ],
-          )
-        ),
-      ),
-    ),
-  );
+    );
+  }
 
   Widget buildMenuItem(MenuItem item) => ListTileTheme(
     selectedColor: Colors.white,
     child: ListTile(
       selectedTileColor: Colors.black26,
-      selected: currentItem == item,
+      selected: widget.currentItem == item,
       minLeadingWidth: 20,
       leading: Icon(item.icon),
       title: Text(item.title),
-      onTap: () => onSelectedItem(item),
+      onTap: () => widget.onSelectedItem(item),
     ),
   );
 }

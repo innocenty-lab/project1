@@ -1,6 +1,6 @@
 import 'package:eklbm_bima_ciputra_satrio/model/menu_item.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/caraKerja/cara_kerja_page.dart';
-import 'package:eklbm_bima_ciputra_satrio/screens/kuis/kuis_page.dart';
+import 'package:eklbm_bima_ciputra_satrio/screens/kuis/main_kuis_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/tentangAplikasi/tentang_aplikasi_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/troubleshoot/troubleshoot_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/menu_page.dart';
@@ -24,15 +24,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Elektronik Modul Kelistrikan Bodi Mobil'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
+  const MyHomePage({Key? key}) : super(key: key);
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -75,7 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
       case MenuItems.caraKerja:
         return CaraKerjaPage();
       case MenuItems.kuis:
-        return kuisPage();
+        return MainKuisPage();
       default:
         return TentangAplikasiPage();
     }
