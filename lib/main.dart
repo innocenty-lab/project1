@@ -1,6 +1,7 @@
 import 'package:eklbm_bima_ciputra_satrio/model/menu_item.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/caraKerja/cara_kerja_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/kuis/main_kuis_page.dart';
+import 'package:eklbm_bima_ciputra_satrio/screens/splashScreen/splash_screen.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/tentangAplikasi/tentang_aplikasi_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/troubleshoot/troubleshoot_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/menu_page.dart';
@@ -26,60 +27,60 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const SplashScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+// class MyHomePage extends StatefulWidget {
+//   const MyHomePage({Key? key}) : super(key: key);
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
+//   @override
+//   State<MyHomePage> createState() => _MyHomePageState();
+// }
 
-class _MyHomePageState extends State<MyHomePage> {
-  MenuItem currentItem = MenuItems.halamanUtama;
+// class _MyHomePageState extends State<MyHomePage> {
+//   MenuItem currentItem = MenuItems.halamanUtama;
 
-  @override
-  Widget build(BuildContext context) => SafeArea(
-    child: ZoomDrawer(
-      style: DrawerStyle.Style1,
-      borderRadius: 40,
-      angle: -10,
-      slideWidth: MediaQuery.of(context).size.width*0.8,
-      showShadow: true,
-      backgroundColor: Colors.orangeAccent,
-      mainScreen: getScreen(),
-      menuScreen: Builder(
-        builder: (context) => MenuPage(
-          currentItem: currentItem,
-          onSelectedItem: (item) {
-            setState(() => currentItem = item);
+//   @override
+//   Widget build(BuildContext context) => SafeArea(
+//     child: ZoomDrawer(
+//       style: DrawerStyle.Style1,
+//       borderRadius: 40,
+//       angle: -10,
+//       slideWidth: MediaQuery.of(context).size.width*0.8,
+//       showShadow: true,
+//       backgroundColor: Colors.orangeAccent,
+//       mainScreen: getScreen(),
+//       menuScreen: Builder(
+//         builder: (context) => MenuPage(
+//           currentItem: currentItem,
+//           onSelectedItem: (item) {
+//             setState(() => currentItem = item);
   
-            ZoomDrawer.of(context)!.close();
-          },
-        ),
-      ),
-    ),
-  );
+//             ZoomDrawer.of(context)!.close();
+//           },
+//         ),
+//       ),
+//     ),
+//   );
 
-  Widget getScreen() {
-    switch (currentItem) {
-      case MenuItems.halamanUtama:
-        return halamanUtamaPage();
-      case MenuItems.menuRPS:
-        return MenuRPSPage();
-      case MenuItems.daftarMateri:
-        return DaftarMateriPage();
-      case MenuItems.troubleshoot:
-        return TroubleshootPage();
-      case MenuItems.caraKerja:
-        return CaraKerjaPage();
-      case MenuItems.kuis:
-        return MainKuisPage();
-      default:
-        return TentangAplikasiPage();
-    }
-  }
-}
+//   Widget getScreen() {
+//     switch (currentItem) {
+//       case MenuItems.halamanUtama:
+//         return halamanUtamaPage();
+//       case MenuItems.menuRPS:
+//         return MenuRPSPage();
+//       case MenuItems.daftarMateri:
+//         return DaftarMateriPage();
+//       case MenuItems.troubleshoot:
+//         return TroubleshootPage();
+//       case MenuItems.caraKerja:
+//         return CaraKerjaPage();
+//       case MenuItems.kuis:
+//         return MainKuisPage();
+//       default:
+//         return TentangAplikasiPage();
+//     }
+//   }
+// }

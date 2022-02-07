@@ -17,7 +17,7 @@ List<QuestionModel> questions = [
 
   QuestionModel(
     "Gambar di bawah ini merupakan relay tipe ...", 
-    Image.asset('assets/images/cat1.jpg'),
+    Image.asset('assets/images/img_question_8.jpg'),
     {
       "Relay tipe NC": false,
       "Relay tipe NO": false,
@@ -53,7 +53,7 @@ List<QuestionModel> questions = [
 
   QuestionModel(
     "Gambar di bawah ini menunjukan symbol ...", 
-    Image.asset('assets/images/cat1.jpg'),
+    Image.asset('assets/images/img_question_11.jpg'),
     {
       "Lampu dengan satu filament": true,
       "Relay tipe normally closed": false,
@@ -113,7 +113,7 @@ List<QuestionModel> questions = [
 
   QuestionModel(
     "Pada gambar di bawah ini menunjukan klakson tipe ...", 
-    Image.asset('assets/images/cat1.jpg'),
+    Image.asset('assets/images/img_question_12.jpg'),
     {
     "Klakson tipe DC": false,
     "Klakson tipe AC": true,
@@ -149,7 +149,7 @@ List<QuestionModel> questions = [
 
   QuestionModel(
     "Gambar di bawah ini merupakan simbol ...", 
-    Image.asset('assets/images/cat1.jpg'),
+    Image.asset('assets/images/img_question_13.jpg'),
     {
     "Lampu sein": false,
     "Lampu kota": false,
@@ -173,7 +173,7 @@ List<QuestionModel> questions = [
 
   QuestionModel(
     "Gambar di bawah ini menunjukan fuse tipe ...", 
-    Image.asset('assets/images/cat1.jpg'),
+    Image.asset('assets/images/img_question_10.jpg'),
     {
     "Blade": false,
     "Tabung": false,
@@ -197,7 +197,7 @@ List<QuestionModel> questions = [
 
   QuestionModel(
     "Gambar di bawah ini menunjukan bohlam lampu tipe ...", 
-    Image.asset('assets/images/cat1.jpg'),
+    Image.asset('assets/images/img_question_15.jpg'),
     {
     "Tipe ordinary bulb": false,
     "Tipe lampu pijar biasa": false,

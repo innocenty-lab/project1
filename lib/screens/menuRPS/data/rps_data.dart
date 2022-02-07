@@ -1,64 +1,59 @@
-import 'package:eklbm_bima_ciputra_satrio/screens/troubleshoot/model/troubleshoot_model.dart';
+// ignore_for_file: file_names
 
-List<TroubleshootModel> troubleshoot = [
+import 'package:eklbm_bima_ciputra_satrio/screens/menuRPS/model/daftar_materi_model.dart';
 
-  TroubleshootModel(
+List<RPSModel> rps = [
+
+  RPSModel(
 		id: 1,
 		judul:'Materi 1',
-		deskripsi:'Trouble, Perawatan dan Perbaikan',
-    file: "assets/pdf/Trouble,_Perawatan_dan_Perbaikan.pdf",
+		deskripsi:'Rencana Pembelajaran Semester',
+    file: "assets/pdf/Rencana_Pembelajaran_Semester.pdf",
   ),
 
-  TroubleshootModel(
-		id: 2,
-		judul: 'Materi 2',
-		deskripsi: 'Troubleshoot Sistem Kelistrikan Mobil',
-    file: "assets/pdf/Troubleshoot_Sistem_Kelistrikan_Mobil.pdf",
-  ),
-
-  // TroubleshootModel(
+  // RPSModel(
 	// 	id: 3,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
   // ),
 
-  // TroubleshootModel(
+  // RPSModel(
 	// 	id: 4,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
   // ),
 
-  // TroubleshootModel(
+  // RPSModel(
 	// 	id: 5,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
   // ),
 
-  // TroubleshootModel(
+  // RPSModel(
 	// 	id: 6,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
   // ),
 
-  // TroubleshootModel(
+  // RPSModel(
 	// 	id: 7,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
   // ),
 
-  // TroubleshootModel(
+  // RPSModel(
 	// 	id: 8,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
   // ),
 
-  // TroubleshootModel(
+  // RPSModel(
 	// 	id: 9,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
   // ),
 
-  // TroubleshootModel(
+  // RPSModel(
 	// 	id: 10,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',

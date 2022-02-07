@@ -42,8 +42,8 @@ class _TroubleshootPageState extends State<TroubleshootPage> {
                         onTap: () async {
                           print("Tampil Dokumen");
                           final path = troubleshoot[index].file;
-                          final file = await PDFApi.loadAsset(path);
-                          openPDF(context, file);
+                          // final file = await PDFApi.loadAsset(path);
+                          // openPDF(context, file);
                         },
     
                         child: Container(
