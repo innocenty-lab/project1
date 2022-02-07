@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:eklbm_bima_ciputra_satrio/screens/kuis/data/pertanyaan_kuis.dart';
+import 'package:eklbm_bima_ciputra_satrio/screens/kuis/data/kuis_data.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/kuis/hasil_kuis.dart';
 import 'package:eklbm_bima_ciputra_satrio/shared/color.dart';
 // import 'package:quizz_app/widgets/quizz_widget.dart';
@@ -64,7 +64,7 @@ class _KuisPageState extends State<KuisPage> {
                             textAlign: TextAlign.start,
                             style: TextStyle(
                               color: Colors.white,
-                              fontSize: 28.0,
+                              fontSize: 25.0,
                             ),
                           ),
                         ),
@@ -74,38 +74,91 @@ class _KuisPageState extends State<KuisPage> {
                         SizedBox(
                           height: 10.0,
                         ),
-                        SizedBox(
-                          width: double.infinity,
-                          height: 250.0,
-                          child: Column(
-                            children: [
-                              Text(
-                                "${questions[index].question}",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 22.0,
-                                ),
+                        Column(
+                          children: [
+                            if (questions[index].image != null) 
+                            
+                            SizedBox(
+                              width: double.infinity,
+                              height: 230.0,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "${questions[index].question}",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: size.aspectRatio * 28,
+                                    ),
+                                  ),
+                                  
+                                  SizedBox(
+                                    width: double.infinity,
+                                    height: 180.0,
+                                    child: questions[index].image,
+                                  ) 
+                                  
+                                ],
                               ),
-                              
-                              if (questions[index].image == null) 
-                              
-                              const SizedBox(
-                                child: Text(
-                                  "null"
-                                ),
-                              )
-                              
-                              else 
+                            )
+                            
+                            else 
                     
-                              SizedBox(
-                                width: double.infinity,
-                                height: 180.0,
-                                child: questions[index].image,
-                              ) 
-                              
-                            ],
-                          ),
+                            SizedBox(
+                              width: double.infinity,
+                              height: 120.0,
+                              child: Column(
+                                children: [
+                                  Text(
+                                    "${questions[index].question}",
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: size.aspectRatio * 28,
+                                    ),
+                                  ),
+                                  
+                                  // const SizedBox(
+                                  //   child: Text(
+                                  //     "null"
+                                  //   ),
+                                  // ),
+                                  
+                                ],
+                              ),
+                            )
+                          ],
                         ),
+                        // SizedBox(
+                        //   width: double.infinity,
+                        //   height: 240.0,
+                        //   child: Column(
+                        //     children: [
+                        //       Text(
+                        //         "${questions[index].question}",
+                        //         style: TextStyle(
+                        //           color: Colors.white,
+                        //           fontSize: 22.0,
+                        //         ),
+                        //       ),
+                              
+                        //       if (questions[index].image == null) 
+                              
+                        //       const SizedBox(
+                        //         child: Text(
+                        //           "null"
+                        //         ),
+                        //       )
+                              
+                        //       else 
+                    
+                        //       SizedBox(
+                        //         width: double.infinity,
+                        //         height: 180.0,
+                        //         child: questions[index].image,
+                        //       ) 
+                              
+                        //     ],
+                        //   ),
+                        // ),
                         Divider(
                           color: Colors.white,
                         ),
@@ -114,9 +167,9 @@ class _KuisPageState extends State<KuisPage> {
                         ),
                         for (int i = 0; i < questions[index].answers!.length; i++)
                           Container(
-                            decoration: BoxDecoration(
-                              color: Colors.black
-                            ),
+                            // decoration: BoxDecoration(
+                            //   color: Colors.black
+                            // ),
                             width: double.infinity,
                             height: 45.0,
                             margin: EdgeInsets.only(
@@ -148,45 +201,43 @@ class _KuisPageState extends State<KuisPage> {
                                       });
                                     }
                                   : null,
-                              child: Center(
-                                child: Text(questions[index].answers!.keys.toList()[i],
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      // fontSize: 18.0,
-                                      fontSize: size.aspectRatio * 22,
-                                    )),
-                              ),
+                              child: Text(questions[index].answers!.keys.toList()[i],
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    // fontSize: 18.0,
+                                    fontSize: size.aspectRatio * 25,
+                                  )),
                             ),
                           ),
                         SizedBox(
                           height: 10.0,
                         ),
-                        RawMaterialButton(
-                          onPressed: () {
-                            if (_controller!.page?.toInt() == questions.length - 1) {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => ResultScreen(score, falseQuestion)));
-                            } else {
-                              _controller!.nextPage(
-                                  duration: Duration(milliseconds: 250),
-                                  curve: Curves.easeInExpo);
+                        // RawMaterialButton(
+                        //   onPressed: () {
+                        //     if (_controller!.page?.toInt() == questions.length - 1) {
+                        //       Navigator.push(
+                        //           context,
+                        //           MaterialPageRoute(
+                        //               builder: (context) => ResultScreen(score, falseQuestion)));
+                        //     } else {
+                        //       _controller!.nextPage(
+                        //           duration: Duration(milliseconds: 250),
+                        //           curve: Curves.easeInExpo);
                     
-                              setState(() {
-                                btnPressed = false;
-                              });
-                            }
-                          },
-                          shape: StadiumBorder(),
-                          fillColor: Colors.blue,
-                          padding: EdgeInsets.all(15.0),
-                          elevation: 0.0,
-                          child: Text(
-                            btnText,
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        )
+                        //       setState(() {
+                        //         btnPressed = false;
+                        //       });
+                        //     }
+                        //   },
+                        //   shape: StadiumBorder(),
+                        //   fillColor: Colors.blue,
+                        //   padding: EdgeInsets.all(15.0),
+                        //   elevation: 0.0,
+                        //   child: Text(
+                        //     btnText,
+                        //     style: TextStyle(color: Colors.white),
+                        //   ),
+                        // )
                       ],
                     ),
                   ),
@@ -195,6 +246,26 @@ class _KuisPageState extends State<KuisPage> {
             );
           },
           itemCount: questions.length,
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            if (_controller!.page?.toInt() == questions.length - 1) {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ResultScreen(score, falseQuestion)));
+            } else {
+              _controller!.nextPage(
+                  duration: Duration(milliseconds: 250),
+                  curve: Curves.easeInExpo);
+    
+              setState(() {
+                btnPressed = false;
+              });
+            }
+          },
+          backgroundColor: Colors.green,
+          child: const Icon(Icons.next_plan_rounded),
         ),
       ),
     );

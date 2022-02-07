@@ -1,9 +1,7 @@
-import 'package:eklbm_bima_ciputra_satrio/main.dart';
-import 'package:eklbm_bima_ciputra_satrio/screens/halamanUtama/halaman_utama_page.dart';
+
+import 'package:eklbm_bima_ciputra_satrio/screens/halamanUtama/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:eklbm_bima_ciputra_satrio/screens/kuis/main_kuis_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/shared/color.dart';
 
 class ResultScreen extends StatefulWidget {
@@ -53,7 +51,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     height: 20.0,
                   ),
                   Text(
-                    "${widget.score * 10}",
+                    "${widget.score * 10}/250",
                     style: TextStyle(
                       color: Colors.orange,
                       fontSize: 85.0,
@@ -122,7 +120,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     color: AppColor.secondaryColor,
                     padding: EdgeInsets.all(18.0),
                     child: Text(
-                      "Reapeat the quizz",
+                      "Kembali",
                       style: TextStyle(color: Colors.white),
                     ),
                   ),
