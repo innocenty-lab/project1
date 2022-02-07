@@ -23,6 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'E-KLBM',
       theme: ThemeData(
+        fontFamily: 'Poppins',
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         primarySwatch: Colors.blue,
       ),
       home: const SplashScreen(),
