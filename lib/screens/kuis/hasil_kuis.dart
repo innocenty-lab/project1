@@ -1,9 +1,7 @@
-import 'package:eklbm_bima_ciputra_satrio/main.dart';
-import 'package:eklbm_bima_ciputra_satrio/screens/halamanUtama/halaman_utama_page.dart';
+
+import 'package:eklbm_bima_ciputra_satrio/screens/halamanUtama/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'package:eklbm_bima_ciputra_satrio/screens/kuis/main_kuis_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/shared/color.dart';
 
 class ResultScreen extends StatefulWidget {

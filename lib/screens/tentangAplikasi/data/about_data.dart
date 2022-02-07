@@ -1,64 +1,57 @@
-import 'package:eklbm_bima_ciputra_satrio/screens/troubleshoot/model/troubleshoot_model.dart';
+import 'package:eklbm_bima_ciputra_satrio/screens/tentangAplikasi/model/about_model.dart';
 
-List<TroubleshootModel> troubleshoot = [
+List<TentangApk> tentangapk = [
 
-  TroubleshootModel(
+  TentangApk(
 		id: 1,
 		judul:'Materi 1',
-		deskripsi:'Trouble, Perawatan dan Perbaikan',
-    file: "assets/pdf/Trouble,_Perawatan_dan_Perbaikan.pdf",
+		deskripsi:'Tentang Aplikasi',
+    file: "assets/pdf/Tentang_Aplikasi.pdf",
   ),
 
-  TroubleshootModel(
-		id: 2,
-		judul: 'Materi 2',
-		deskripsi: 'Troubleshoot Sistem Kelistrikan Mobil',
-    file: "assets/pdf/Troubleshoot_Sistem_Kelistrikan_Mobil.pdf",
-  ),
-
-  // TroubleshootModel(
+  // TentangApk(
 	// 	id: 3,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
   // ),
 
-  // TroubleshootModel(
+  // TentangApk(
 	// 	id: 4,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
   // ),
 
-  // TroubleshootModel(
+  // TentangApk(
 	// 	id: 5,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
   // ),
 
-  // TroubleshootModel(
+  // TentangApk(
 	// 	id: 6,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
   // ),
 
-  // TroubleshootModel(
+  // TentangApk(
 	// 	id: 7,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
   // ),
 
-  // TroubleshootModel(
+  // TentangApk(
 	// 	id: 8,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
   // ),
 
-  // TroubleshootModel(
+  // TentangApk(
 	// 	id: 9,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
   // ),
 
-  // TroubleshootModel(
+  // TentangApk(
 	// 	id: 10,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
