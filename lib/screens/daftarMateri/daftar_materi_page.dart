@@ -130,30 +130,34 @@ class _DaftarMateriPageState extends State<DaftarMateriPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.cyan,
           title: Text(
             'Daftar Materi'
           ),
           centerTitle: true,
           leading: MenuWidget(),
         ),
-        body: ListView.builder(
-          itemCount: materi.length,
-          itemBuilder: (context, index) {
-            return Container(
-              child: List1(
-                textJudul: materi[index].judul,
-                textDeskripsi: materi[index].deskripsi,
-                icon: "assets/icons/icon_Edit.svg",
-                press: () async {
-                  print("Tampil Dokumen");
-                  final path = materi[index].file;
-                  final file = await PDFApi.loadAsset(path);
-                  openPDF(context, file);
-                },
-              ),
-            );
-          }
+        body: Container(
+          decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage('assets/images/mobil1.png'))),
+          child: ListView.builder(
+            itemCount: materi.length,
+            itemBuilder: (context, index) {
+              return Container(
+                child: List1(
+                  textJudul: materi[index].judul,
+                  textDeskripsi: materi[index].deskripsi,
+                  icon: "assets/icons/icon_Edit.svg",
+                  press: () async {
+                    print("Tampil Dokumen");
+                    final path = materi[index].file;
+                    final file = await PDFApi.loadAsset(path);
+                    openPDF(context, file);
+                  },
+                ),
+              );
+            }
+          ),
         ),
       )
     );

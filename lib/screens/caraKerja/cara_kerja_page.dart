@@ -11,31 +11,36 @@ class CaraKerjaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.teal,
       title: Text(
-        'Cara Kerja Page'
+        'Cara Kerja'
       ),
       centerTitle: true,
       leading: MenuWidget(),
     ),
-    body: Column(
-      children: [
-        List1(
-          icon: "assets/icons/icon_Edit.svg",
-          textJudul: 'Video 1',
-          textDeskripsi: 'Kelistrikan',
-          press: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => AssetPlayerWidget()));
-          },
-        ),
-        List1(
-          icon: "assets/icons/icon_Edit.svg",
-          textJudul: 'Video 2',
-          textDeskripsi: 'Perawatan Sistem Penenrangan dan Panel',
-          press: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => AssetPlayerWidgetTwo()));
-          },),
-      ],
+    body: Container(
+      decoration: BoxDecoration(
+        color: Colors.tealAccent,
+      image: DecorationImage(image: AssetImage('assets/images/mobil3.png'))),
+      child: Column(
+        children: [
+          List1(
+            icon: "assets/icons/icon_Edit.svg",
+            textJudul: 'Video 1',
+            textDeskripsi: 'Kelistrikan',
+            press: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => AssetPlayerWidget()));
+            },
+          ),
+          List1(
+            icon: "assets/icons/icon_Edit.svg",
+            textJudul: 'Video 2',
+            textDeskripsi: 'Perawatan Sistem Penenrangan dan Panel',
+            press: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => AssetPlayerWidgetTwo()));
+            },),
+        ],
+      ),
     )
   );
 }

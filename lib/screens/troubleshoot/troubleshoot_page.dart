@@ -127,30 +127,35 @@ class _TroubleshootPageState extends State<TroubleshootPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.deepOrange,
           title: Text(
             'Troubleshoot'
           ),
           centerTitle: true,
           leading: MenuWidget(),
         ),
-        body: ListView.builder(
-          itemCount: troubleshoot.length,
-          itemBuilder: (context, index) {
-            return Container(
-              child: List1(
-                textJudul: troubleshoot[index].judul,
-                textDeskripsi: troubleshoot[index].deskripsi,
-                icon: "assets/icons/icon_Edit.svg",
-                press: () async {
-                  print("Tampil Dokumen");
-                  final path = troubleshoot[index].file;
-                  final file = await PDFApi.loadAsset(path);
-                  openPDF(context, file);
-                },
-              ),
-            );
-          }
+        body: Container(
+          decoration: BoxDecoration(
+            color: Colors.red[900],
+          image: DecorationImage(image: AssetImage('assets/images/mobil2.png'))),
+          child: ListView.builder(
+            itemCount: troubleshoot.length,
+            itemBuilder: (context, index) {
+              return Container(
+                child: List1(
+                  textJudul: troubleshoot[index].judul,
+                  textDeskripsi: troubleshoot[index].deskripsi,
+                  icon: "assets/icons/icon_Edit.svg",
+                  press: () async {
+                    print("Tampil Dokumen");
+                    final path = troubleshoot[index].file;
+                    final file = await PDFApi.loadAsset(path);
+                    openPDF(context, file);
+                  },
+                ),
+              );
+            }
+          ),
         ),
       )
     );
