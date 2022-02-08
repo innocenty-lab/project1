@@ -145,7 +145,7 @@ class _TroubleshootPageState extends State<TroubleshootPage> {
                 child: List1(
                   textJudul: troubleshoot[index].judul,
                   textDeskripsi: troubleshoot[index].deskripsi,
-                  icon: "assets/icons/icon_Edit.svg",
+                  icon: "assets/icons/document.svg",
                   press: () async {
                     print("Tampil Dokumen");
                     final path = troubleshoot[index].file;
