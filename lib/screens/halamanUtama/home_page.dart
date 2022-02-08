@@ -1,9 +1,11 @@
+import 'package:eklbm_bima_ciputra_satrio/components/view_single_pdf.dart';
 import 'package:eklbm_bima_ciputra_satrio/model/menu_item.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/caraKerja/cara_kerja_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/daftarMateri/daftar_materi_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/halamanUtama/halaman_utama_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/kuis/main_kuis_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/menuRPS/menu_rps_page.dart';
+import 'package:eklbm_bima_ciputra_satrio/screens/menuRPS/model/rps_model.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/menu_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/tentangAplikasi/tentang_aplikasi_page.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/troubleshoot/troubleshoot_page.dart';
@@ -43,12 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
     ),
   );
 
+
   Widget getScreen() {
     switch (currentItem) {
       case MenuItems.halamanUtama:
         return halamanUtamaPage();
       case MenuItems.menuRPS:
         return MenuRPSPage();
+        // return ViewPdf(file: "assets/pdf/Rencana_Pembelajaran_Semester.pdf");
+        // return ViewPdf(file: "assets/pdf/Rencana_Pembelajaran_Semester.pdf");
+        // Navigator.push(context, MaterialPageRoute(builder: (context) => ViewPdf(file: "assets/pdf/Rencana_Pembelajaran_Semester.pdf")));
       case MenuItems.daftarMateri:
         return DaftarMateriPage();
       case MenuItems.troubleshoot:

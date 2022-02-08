@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:eklbm_bima_ciputra_satrio/api/pdf_api.dart';
 import 'package:eklbm_bima_ciputra_satrio/components/list1.dart';
 import 'package:eklbm_bima_ciputra_satrio/components/pdf_viewer_page.dart';
+import 'package:eklbm_bima_ciputra_satrio/components/view_pdf.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/daftarMateri/data/materi_data.dart';
 import 'package:eklbm_bima_ciputra_satrio/screens/menu_widget.dart';
 import 'package:flutter/material.dart';
@@ -148,11 +149,14 @@ class _DaftarMateriPageState extends State<DaftarMateriPage> {
                   textJudul: materi[index].judul,
                   textDeskripsi: materi[index].deskripsi,
                   icon: "assets/icons/icon_Edit.svg",
-                  press: () async {
-                    print("Tampil Dokumen");
-                    final path = materi[index].file;
-                    final file = await PDFApi.loadAsset(path);
-                    openPDF(context, file);
+                  // press: () async {
+                  //   print("Tampil Dokumen");
+                  //   final path = materi[index].file;
+                  //   final file = await PDFApi.loadAsset(path);
+                  //   openPDF(context, file);
+                  // },
+                  press: () => {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ViewPDF(materimodel: materi[index])))
                   },
                 ),
               );
