@@ -21,37 +21,38 @@ class _BodyState extends State<Body> {
         splashIconSize: MediaQuery.of(context).size.height,
         // backgroundColor: Colors.yellow,
         duration: 1000,
-        splash: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Column(
-              children: [
-                SizedBox(height: size.aspectRatio * 500,),
-                Container(
-                  height: MediaQuery.of(context).size.height / 3,
-                  // decoration: BoxDecoration(
-                  //   color: Colors.red,
-                  //   // color: Color(0xfffbfbf9)
-                  // ),
-                  child: Image.asset(
-                    'assets/images/logo.png',
-                    height: 200, width: 200,
+        splash: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(height: size.height * 0.15),
+              Image.asset(
+                'assets/images/logo.png',
+                scale: size.height * 0.03,
+              ),
+              SizedBox(height: size.height * 0.08),
+              Text(
+                "Elektronik Modul Kelistrikan Bodi Mobil",
+                  style: TextStyle(
+                    fontSize: 28,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w800,
                   ),
+                  textAlign: TextAlign.center,
                 ),
-              ],
-            ),
-            SizedBox(height: size.aspectRatio * 80),
-            CircularProgressIndicator(color: Colors.white,),
-            SizedBox(height: size.aspectRatio * 470,),
-            Column(
-              //mainAxisAlignment: MainAxisAlignment.,
-              //crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text('Copyright © 2021 by Bima Ciputra Satrio | Versi 1.0.4', style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.white70),),
-              ],
-            ),
-            //CircularProgressIndicator(),
-          ],
+              SizedBox(height: size.height * 0.15),
+              CircularProgressIndicator(color: Colors.white,),
+              SizedBox(height: size.height * 0.15),
+              Text('Copyright © 2021 by Bima Ciputra Satrio | Versi 1.0.4', 
+                style: TextStyle(
+                  fontSize: 12, 
+                  fontWeight: FontWeight.w600, 
+                  color: Colors.white70
+                ),
+              ),
+              //CircularProgressIndicator(),
+            ],
+          ),
         ),
         nextScreen: MyHomePage(),
       ),

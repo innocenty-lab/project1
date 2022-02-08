@@ -19,7 +19,7 @@ class List1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return 
         Padding(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: ClipRRect(
             child: Stack(
               children: [
