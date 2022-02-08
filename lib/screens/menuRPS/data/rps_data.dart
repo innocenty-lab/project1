@@ -1,6 +1,6 @@
 // ignore_for_file: file_names
 
-import 'package:eklbm_bima_ciputra_satrio/screens/menuRPS/model/daftar_materi_model.dart';
+import 'package:eklbm_bima_ciputra_satrio/screens/menuRPS/model/rps_model.dart';
 
 List<RPSModel> rps = [
 
