@@ -13,6 +13,7 @@ class MainKuisPage extends StatelessWidget {
       title: Text(
         'Main Kuis Page'
       ),
+      centerTitle: true,
       leading: MenuWidget(),
     ),
     body: Center(

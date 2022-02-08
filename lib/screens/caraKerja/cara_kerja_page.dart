@@ -11,6 +11,7 @@ class CaraKerjaPage extends StatelessWidget {
       title: Text(
         'Cara Kerja Page'
       ),
+      centerTitle: true,
       leading: MenuWidget(),
     ),
   );

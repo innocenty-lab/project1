@@ -15,6 +15,7 @@ class halamanUtamaPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
         title: Text('Halaman Utama'),
+        centerTitle: true,
         leading: MenuWidget(),
       ),
       backgroundColor: Color(0xff1F8DF5),
