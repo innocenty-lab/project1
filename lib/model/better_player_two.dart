@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 import 'package:eklbm_bima_ciputra_satrio/model/video_player_widget.dart';
 
-class AssetPlayerWidget extends StatefulWidget {
+class AssetPlayerWidgetTwo extends StatefulWidget {
   @override
-  _AssetPlayerWidgetState createState() => _AssetPlayerWidgetState();
+  _AssetPlayerWidgetTwoState createState() => _AssetPlayerWidgetTwoState();
 }
 
-class _AssetPlayerWidgetState extends State<AssetPlayerWidget> {
+class _AssetPlayerWidgetTwoState extends State<AssetPlayerWidgetTwo> {
   late VideoPlayerController controller;
 
   @override
   void initState() {
     super.initState();
-    controller = VideoPlayerController.asset('assets/video/video1.mp4')
+    controller = VideoPlayerController.asset('assets/video/video2.mp4')
       ..addListener(() => setState(() {}))
       ..setLooping(true)
       ..initialize().then((_) => controller.play());
@@ -33,7 +33,7 @@ class _AssetPlayerWidgetState extends State<AssetPlayerWidget> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Video Kelistrikan'),
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.indigoAccent,
         centerTitle: true,
       ),
       body: Column(

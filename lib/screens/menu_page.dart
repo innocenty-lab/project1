@@ -45,7 +45,7 @@ class _MenuPageState extends State<MenuPage> {
       data: ThemeData.dark(),
       child: SafeArea(
         child: Scaffold(
-          backgroundColor: Colors.indigo,
+          backgroundColor: Color(0xff5297f4),
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             title: Text(
