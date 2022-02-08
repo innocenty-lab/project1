@@ -44,29 +44,50 @@ class _MenuPageState extends State<MenuPage> {
     return Theme(
       data: ThemeData.dark(),
       child: SafeArea(
-        child: Scaffold(
-          backgroundColor: Color(0xff5297f4),
-          appBar: AppBar(
-            backgroundColor: Colors.transparent,
-            title: Text(
-              'E-KLBM'
-            ),
-            // leading:,
-          ),
-          body: SingleChildScrollView(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // Spacer(),
-                SizedBox(
-                  height: size.height * 0.05,
-                ),
-                ...MenuItems.all.map(buildMenuItem).toList(),
-                // Spacer(flex: 2),
-                SizedBox(
-                  height: size.height * 0.05,
-                ),
+        child: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+              stops: [
+                0.1, 
+                0.3, 
+                0.6, 
+                // 0.9
               ],
+              colors: [
+                Color(0xff5C7AEA), 
+                Color(0xff3D56B2), 
+                Color(0xff14279B), 
+                // Colors.orangeAccent
+              ]
+            ),
+          ),
+          child: Scaffold(
+            // backgroundColor: Color(0xff5297f4),
+            backgroundColor: Colors.transparent,
+            appBar: AppBar(
+              backgroundColor: Colors.transparent,
+              title: Text(
+                'E-KLBM'
+              ),
+              // leading:,
+            ),
+            body: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Spacer(),
+                  SizedBox(
+                    height: size.height * 0.05,
+                  ),
+                  ...MenuItems.all.map(buildMenuItem).toList(),
+                  // Spacer(flex: 2),
+                  SizedBox(
+                    height: size.height * 0.05,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

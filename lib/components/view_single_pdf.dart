@@ -21,7 +21,7 @@ class ViewSinglePdf extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        //backgroundColor: AppColor.fixsecondarycolor,
+        backgroundColor: Color(0xff11698E),
         // title: Text("assets/pdf/Rencana_Pembelajaran_Semester.pdf"),
         title: Text(newName),
         centerTitle: true,
