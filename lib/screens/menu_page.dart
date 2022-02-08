@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:eklbm_bima_ciputra_satrio/model/menu_item.dart';
 
 class MenuItems {
-  static const halamanUtama = MenuItem('Halaman Utama', Icons.home_outlined);
-  static const menuRPS = MenuItem('Menu RPS', Icons.school_outlined);
+  static const halamanUtama = MenuItem('Home', Icons.home_outlined);
+  static const menuRPS = MenuItem('RPS', Icons.school_outlined);
   static const daftarMateri = MenuItem('Daftar Materi', Icons.auto_stories_outlined);
   static const troubleshoot = MenuItem('Troubleshoot', Icons.build_outlined);
   static const caraKerja = MenuItem('Cara Kerja', Icons.videocam_outlined);
