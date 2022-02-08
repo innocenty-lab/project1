@@ -127,7 +127,7 @@ class _TroubleshootPageState extends State<TroubleshootPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: Color(0xff344FA1),
           title: Text(
             'Troubleshoot'
           ),
@@ -157,14 +157,14 @@ class _TroubleshootPageState extends State<TroubleshootPage> {
                     end: Alignment.topRight,
                     stops: [
                       0.1, 
-                      // 0.3, 
-                      // 0.6, 
+                      0.3, 
+                      0.6, 
                       // 0.9
                     ],
                     colors: [
-                      Colors.orange, 
-                      // Colors.yellow, 
-                      // Colors.yellowAccent, 
+                      Color(0xff344FA1), 
+                      Color(0xff3D84B8),
+                      Color(0xff3D84B8),
                       // Colors.orangeAccent
                     ]
                   ),

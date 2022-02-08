@@ -31,16 +31,19 @@ class _BodyState extends State<Body> {
                 scale: size.height * 0.03,
               ),
               SizedBox(height: size.height * 0.08),
-              Text(
-                "Elektronik Modul Kelistrikan Bodi Mobil",
-                  style: TextStyle(
-                    fontSize: 28,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w800,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 0),
+                child: Text(
+                  "Elektronik Modul Kelistrikan Bodi Mobil",
+                    style: TextStyle(
+                      fontSize: 28,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w800,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
-                ),
-              SizedBox(height: size.height * 0.15),
+              ),
+              SizedBox(height: size.height * 0.10),
               CircularProgressIndicator(color: Colors.white,),
               SizedBox(height: size.height * 0.15),
               Text('Copyright © 2021 by Bima Ciputra Satrio | Versi 1.0.4', 

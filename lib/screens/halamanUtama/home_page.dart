@@ -30,7 +30,8 @@ class _MyHomePageState extends State<MyHomePage> {
       angle: -10,
       slideWidth: MediaQuery.of(context).size.width*0.8,
       showShadow: true,
-      backgroundColor: Colors.orangeAccent,
+      // backgroundColor: Colors.orangeAccent,
+      backgroundColor: Color(0xffB8B5FF),
       mainScreen: getScreen(),
       menuScreen: Builder(
         builder: (context) => MenuPage(

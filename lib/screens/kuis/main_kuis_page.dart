@@ -21,8 +21,18 @@ class MainKuisPage extends StatelessWidget {
       gradient: LinearGradient(
       begin: Alignment.bottomLeft,
       end: Alignment.topRight,
-      stops: [0.1, 0.4, 0.8, 0.9],
-      colors: [Colors.indigo, Colors.purple, Colors.indigoAccent, Colors.deepPurpleAccent])),
+      stops: [
+        // 0.1, 
+        0.4, 
+        0.8, 
+        0.9
+      ],
+      colors: [
+        // Colors.indigo, 
+        Colors.purple, 
+        Colors.indigoAccent, 
+        Colors.deepPurpleAccent
+      ])),
       child: Center(
         child: RawMaterialButton(
           onPressed: () {
@@ -35,7 +45,7 @@ class MainKuisPage extends StatelessWidget {
             );
           },
           shape: const StadiumBorder(),
-          fillColor: AppColor.secondaryColor,
+          fillColor: Color(0xff7868E6),
           child: const Padding(
             padding:
                 EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
