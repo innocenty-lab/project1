@@ -20,7 +20,7 @@ class CaraKerjaPage extends StatelessWidget {
     ),
     body: Container(
       decoration: BoxDecoration(
-        color: Colors.tealAccent,
+        // color: Colors.tealAccent,
       image: DecorationImage(image: AssetImage('assets/images/mobil3.png'))),
       child: Column(
         children: [
@@ -30,7 +30,13 @@ class CaraKerjaPage extends StatelessWidget {
             textDeskripsi: 'Kelistrikan',
             press: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => AssetPlayerWidget()));
-            },
+            }, 
+            gradient: LinearGradient(
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+              stops: [0.1, 0.3, 0.6, 0.9],
+              colors: [Colors.orange, Colors.yellow, Colors.yellowAccent, Colors.orangeAccent]
+            ),
           ),
           List1(
             icon: "assets/icons/icon_Edit.svg",
@@ -38,7 +44,24 @@ class CaraKerjaPage extends StatelessWidget {
             textDeskripsi: 'Perawatan Sistem Penenrangan dan Panel',
             press: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) => AssetPlayerWidgetTwo()));
-            },),
+            },
+            gradient: LinearGradient(
+              begin: Alignment.bottomLeft,
+              end: Alignment.topRight,
+              stops: [
+                0.1, 
+                // 0.3, 
+                // 0.6, 
+                // 0.9
+              ],
+              colors: [
+                Colors.orange, 
+                // Colors.yellow, 
+                // Colors.yellowAccent, 
+                // Colors.orangeAccent
+              ]
+            ),
+          ),
         ],
       ),
     )

@@ -136,7 +136,7 @@ class _TroubleshootPageState extends State<TroubleshootPage> {
         ),
         body: Container(
           decoration: BoxDecoration(
-            color: Colors.red[900],
+            // color: Colors.red[900],
           image: DecorationImage(image: AssetImage('assets/images/mobil2.png'))),
           child: ListView.builder(
             itemCount: troubleshoot.length,
@@ -151,7 +151,23 @@ class _TroubleshootPageState extends State<TroubleshootPage> {
                     final path = troubleshoot[index].file;
                     final file = await PDFApi.loadAsset(path);
                     openPDF(context, file);
-                  },
+                  }, 
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    stops: [
+                      0.1, 
+                      // 0.3, 
+                      // 0.6, 
+                      // 0.9
+                    ],
+                    colors: [
+                      Colors.orange, 
+                      // Colors.yellow, 
+                      // Colors.yellowAccent, 
+                      // Colors.orangeAccent
+                    ]
+                  ),
                 ),
               );
             }

@@ -157,7 +157,23 @@ class _DaftarMateriPageState extends State<DaftarMateriPage> {
                   // },
                   press: () => {
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) => ViewPDF(materimodel: materi[index])))
-                  },
+                  }, 
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    stops: [
+                      0.1, 
+                      // 0.3, 
+                      // 0.6, 
+                      // 0.9
+                    ],
+                    colors: [
+                      Colors.orange, 
+                      // Colors.yellow, 
+                      // Colors.yellowAccent, 
+                      // Colors.orangeAccent
+                    ]
+                  ),
                 ),
               );
             }

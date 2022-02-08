@@ -21,47 +21,55 @@ List<MateriModel> materi = [
 	// 	id: 3,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
+  //   file: "assets/pdf/Pengertian_dan_Fungsi_Sistem_Kelistrikan_Body.pdf",
   // ),
 
   // MateriModel(
 	// 	id: 4,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
+  //   file: "assets/pdf/Pengertian_dan_Fungsi_Sistem_Kelistrikan_Body.pdf",
   // ),
 
   // MateriModel(
 	// 	id: 5,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
+  //   file: "assets/pdf/Pengertian_dan_Fungsi_Sistem_Kelistrikan_Body.pdf",
   // ),
 
   // MateriModel(
 	// 	id: 6,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
+  //   file: "assets/pdf/Pengertian_dan_Fungsi_Sistem_Kelistrikan_Body.pdf",
   // ),
 
   // MateriModel(
 	// 	id: 7,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
+  //   file: "assets/pdf/Pengertian_dan_Fungsi_Sistem_Kelistrikan_Body.pdf",
   // ),
 
   // MateriModel(
 	// 	id: 8,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
+  //   file: "assets/pdf/Pengertian_dan_Fungsi_Sistem_Kelistrikan_Body.pdf",
   // ),
 
   // MateriModel(
 	// 	id: 9,
 	// 	judul:'Materi 1',
 	// 	deskripsi:'Pengertian dan Fungsi Sistem Kelistrikan',
+  //   file: "assets/pdf/Pengertian_dan_Fungsi_Sistem_Kelistrikan_Body.pdf",
   // ),
 
   // MateriModel(
 	// 	id: 10,
 	// 	judul: 'Materi 2',
 	// 	deskripsi: 'Pengertian dan Penjelasan Kelistrikan Mobil',
+  //   file: "assets/pdf/Pengertian_dan_Fungsi_Sistem_Kelistrikan_Body.pdf",
   // ),
 ];

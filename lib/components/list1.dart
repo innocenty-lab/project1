@@ -7,11 +7,13 @@ class List1 extends StatelessWidget {
     required this.textJudul,
     required this.textDeskripsi,
     required this.icon,
+    required this.gradient,
     this.press,
   }) : super(key: key);
 
   final String textJudul, textDeskripsi, icon;
   final VoidCallback? press;
+  final Gradient gradient;
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +34,13 @@ class List1 extends StatelessWidget {
                       //     Color(0xFF42A5F5),
                       //   ],
                       // ),
-                      gradient: LinearGradient(
-                        begin: Alignment.bottomLeft,
-                        end: Alignment.topRight,
-                        stops: [0.1, 0.3, 0.6, 0.9],
-                        colors: [Colors.orange, Colors.yellow, Colors.yellowAccent, Colors.orangeAccent]
-                      ),
+                      // gradient: LinearGradient(
+                      //   begin: Alignment.bottomLeft,
+                      //   end: Alignment.topRight,
+                      //   stops: [0.1, 0.3, 0.6, 0.9],
+                      //   colors: [Colors.orange, Colors.yellow, Colors.yellowAccent, Colors.orangeAccent]
+                      // ),
+                      gradient: gradient
                     ),
                   ),
                 ),
