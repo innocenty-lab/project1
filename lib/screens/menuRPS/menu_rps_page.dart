@@ -133,37 +133,23 @@ class _MenuRPSPageState extends State<MenuRPSPage> {
           centerTitle: true,
           leading: MenuWidget(),
         ),
-        body: Column(
-          children: [
-            Container(
-              child: Expanded(
-                child: Row(
-                  children: [
-                    Text("yyvvuh")
-                  ],
-                ),
+        body: ListView.builder(
+          itemCount: rps.length,
+          itemBuilder: (context, index) {
+            return Container(
+              child: List1(
+                textJudul: rps[index].judul,
+                textDeskripsi: rps[index].deskripsi,
+                icon: "assets/icons/icon_Edit.svg",
+                press: () async {
+                  print("Tampil Dokumen");
+                  final path = rps[index].file;
+                  final file = await PDFApi.loadAsset(path);
+                  openPDF(context, file);
+                },
               ),
-            ),
-        
-            ListView.builder(
-              itemCount: rps.length,
-              itemBuilder: (context, index) {
-                return Container(
-                  child: List1(
-                    textJudul: rps[index].judul,
-                    textDeskripsi: rps[index].deskripsi,
-                    icon: "assets/icons/icon_Edit.svg",
-                    press: () async {
-                      print("Tampil Dokumen");
-                      final path = rps[index].file;
-                      final file = await PDFApi.loadAsset(path);
-                      openPDF(context, file);
-                    },
-                  ),
-                );
-              }
-            ),
-          ],
+            );
+          }
         ),
       )
     );
