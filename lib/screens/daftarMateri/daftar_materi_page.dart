@@ -131,33 +131,53 @@ class _DaftarMateriPageState extends State<DaftarMateriPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.blue,
+          backgroundColor: Colors.cyan,
           title: Text(
             'Daftar Materi'
           ),
           centerTitle: true,
           leading: MenuWidget(),
         ),
-        body: ListView.builder(
-          itemCount: materi.length,
-          itemBuilder: (context, index) {
-            return Container(
-              child: List1(
-                textJudul: materi[index].judul,
-                textDeskripsi: materi[index].deskripsi,
-                icon: "assets/icons/icon_Edit.svg",
-                // press: () async {
-                //   print("Tampil Dokumen");
-                //   final path = materi[index].file;
-                //   final file = await PDFApi.loadAsset(path);
-                //   openPDF(context, file);
-                // },
-                press: () => {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ViewPDF(materimodel: materi[index])))
-                },
-              ),
-            );
-          }
+        body: Container(
+          decoration: BoxDecoration(
+          image: DecorationImage(image: AssetImage('assets/images/mobil1.png'))),
+          child: ListView.builder(
+            itemCount: materi.length,
+            itemBuilder: (context, index) {
+              return Container(
+                child: List1(
+                  textJudul: materi[index].judul,
+                  textDeskripsi: materi[index].deskripsi,
+                  icon: "assets/icons/icon_Edit.svg",
+                  // press: () async {
+                  //   print("Tampil Dokumen");
+                  //   final path = materi[index].file;
+                  //   final file = await PDFApi.loadAsset(path);
+                  //   openPDF(context, file);
+                  // },
+                  press: () => {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => ViewPDF(materimodel: materi[index])))
+                  }, 
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                    stops: [
+                      0.1, 
+                      // 0.3, 
+                      // 0.6, 
+                      // 0.9
+                    ],
+                    colors: [
+                      Colors.orange, 
+                      // Colors.yellow, 
+                      // Colors.yellowAccent, 
+                      // Colors.orangeAccent
+                    ]
+                  ),
+                ),
+              );
+            }
+          ),
         ),
       )
     );

@@ -9,35 +9,43 @@ class MainKuisPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.purple,
       title: Text(
-        'Main Kuis Page'
+        'Main Kuis'
       ),
       centerTitle: true,
       leading: MenuWidget(),
     ),
-    body: Center(
-      child: RawMaterialButton(
-        onPressed: () {
-          // Navigating the the Quizz Screen
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => KuisPage(),
-            )
-          );
-        },
-        shape: const StadiumBorder(),
-        fillColor: AppColor.secondaryColor,
-        child: const Padding(
-          padding:
-              EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
-          child: Text(
-            "Start the Quizz",
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 26.0,
-              fontWeight: FontWeight.bold,
+    body: Container(
+      decoration: BoxDecoration(
+      gradient: LinearGradient(
+      begin: Alignment.bottomLeft,
+      end: Alignment.topRight,
+      stops: [0.1, 0.4, 0.8, 0.9],
+      colors: [Colors.indigo, Colors.purple, Colors.indigoAccent, Colors.deepPurpleAccent])),
+      child: Center(
+        child: RawMaterialButton(
+          onPressed: () {
+            // Navigating the the Quizz Screen
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => KuisPage(),
+              )
+            );
+          },
+          shape: const StadiumBorder(),
+          fillColor: AppColor.secondaryColor,
+          child: const Padding(
+            padding:
+                EdgeInsets.symmetric(vertical: 12.0, horizontal: 24.0),
+            child: Text(
+              "Start the Quiz",
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 26.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
         ),
