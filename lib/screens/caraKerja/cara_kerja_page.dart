@@ -25,7 +25,7 @@ class CaraKerjaPage extends StatelessWidget {
       child: Column(
         children: [
           List1(
-            icon: "assets/icons/icon_Edit.svg",
+            icon: "assets/icons/video.svg",
             textJudul: 'Video 1',
             textDeskripsi: 'Kelistrikan',
             press: () {
@@ -39,7 +39,7 @@ class CaraKerjaPage extends StatelessWidget {
             ),
           ),
           List1(
-            icon: "assets/icons/icon_Edit.svg",
+            icon: "assets/icons/video.svg",
             textJudul: 'Video 2',
             textDeskripsi: 'Perawatan Sistem Penenrangan dan Panel',
             press: () {

@@ -131,7 +131,7 @@ class _DaftarMateriPageState extends State<DaftarMateriPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.cyan,
+          backgroundColor: Colors.red,
           title: Text(
             'Daftar Materi'
           ),
@@ -140,7 +140,7 @@ class _DaftarMateriPageState extends State<DaftarMateriPage> {
         ),
         body: Container(
           decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/mobil1.png'))),
+          image: DecorationImage(image: AssetImage('assets/images/mobil4.png'))),
           child: ListView.builder(
             itemCount: materi.length,
             itemBuilder: (context, index) {
@@ -148,7 +148,7 @@ class _DaftarMateriPageState extends State<DaftarMateriPage> {
                 child: List1(
                   textJudul: materi[index].judul,
                   textDeskripsi: materi[index].deskripsi,
-                  icon: "assets/icons/icon_Edit.svg",
+                  icon: "assets/icons/document.svg",
                   // press: () async {
                   //   print("Tampil Dokumen");
                   //   final path = materi[index].file;
@@ -163,14 +163,14 @@ class _DaftarMateriPageState extends State<DaftarMateriPage> {
                     end: Alignment.topRight,
                     stops: [
                       0.1, 
-                      // 0.3, 
-                      // 0.6, 
+                      0.5, 
+                      0.9, 
                       // 0.9
                     ],
                     colors: [
-                      Colors.orange, 
-                      // Colors.yellow, 
-                      // Colors.yellowAccent, 
+                      Color(0xffff4500), 
+                      Color(0xffFF616D), 
+                      Color(0xffdc143c), 
                       // Colors.orangeAccent
                     ]
                   ),
