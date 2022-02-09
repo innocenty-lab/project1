@@ -11,7 +11,7 @@ class CaraKerjaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
-      backgroundColor: Colors.teal,
+      backgroundColor: Color(0xff808080),
       title: Text(
         'Cara Kerja'
       ),
@@ -20,7 +20,7 @@ class CaraKerjaPage extends StatelessWidget {
     ),
     body: Container(
       decoration: BoxDecoration(
-        // color: Colors.tealAccent,
+      color: Color(0xffFFEFD5),
       image: DecorationImage(image: AssetImage('assets/images/mobil3.png'))),
       child: Column(
         children: [
@@ -34,8 +34,8 @@ class CaraKerjaPage extends StatelessWidget {
             gradient: LinearGradient(
               begin: Alignment.bottomLeft,
               end: Alignment.topRight,
-              stops: [0.1, 0.3, 0.6, 0.9],
-              colors: [Colors.orange, Colors.yellow, Colors.yellowAccent, Colors.orangeAccent]
+              stops: [0.1, 0.4, 0.6],
+              colors: [Color(0xffA9A9A9), Color(0xffD3D3D3), Color(0xffA9A9A9),],
             ),
           ),
           List1(
@@ -48,18 +48,8 @@ class CaraKerjaPage extends StatelessWidget {
             gradient: LinearGradient(
               begin: Alignment.bottomLeft,
               end: Alignment.topRight,
-              stops: [
-                0.1, 
-                // 0.3, 
-                // 0.6, 
-                // 0.9
-              ],
-              colors: [
-                Colors.orange, 
-                // Colors.yellow, 
-                // Colors.yellowAccent, 
-                // Colors.orangeAccent
-              ]
+              stops: [0.1, 0.4, 0.6],
+              colors: [Color(0xffA9A9A9), Color(0xffD3D3D3), Color(0xffA9A9A9),],
             ),
           ),
         ],
